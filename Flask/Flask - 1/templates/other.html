@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}
+            Default Value
+           {%endblock%}
+    </title>
+</head>
+<body>
+    <p>This will always be in  all page</p>
+{%block content%} 
+    <h1>Filters</h1>
+    <p>{{some_text| upper}}</p> <!--upper filter-->
+    <p>{{some_text| lower}}</p> 
+    <p>{{some_text| replace('l','L')}}</p>
+    <p>{{some_text| reverse_string}}</p>
+    <p>{{some_text| repeat(3)}}</p>
+    <p>{{some_text| alternate_case}}</p>
+    
+
+{%endblock%}
+</body>
+</html>
