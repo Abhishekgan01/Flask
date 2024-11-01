@@ -72,7 +72,7 @@ Flask sessions use cookies to store session data in a secure way. The session da
 
 Key Differences:
 Cookies are stored in the user's browser and are sent back to the server with each request. They can be seen and modified by the user.
-Sessions store data on the server, and only a session ID is stored in the user's browser. Sessions are more secure because the data itself isn’t exposed to the user.
+Sessions store data on the server, and only a session ID is stored in the user's browser. Sessions are more secure because the data itself isn't exposed to the user.
 """
 
 if __name__ == '__main__':
