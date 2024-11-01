@@ -5,11 +5,11 @@
     </title>
 {%block content%} 
 
-    <h1>Filters</h1>
+    <h1>Filters</h1> <!-- | is used as filter  -->
     <p>{{some_text| upper}}</p> <!--upper filter-->
     <p>{{some_text| lower}}</p> 
     <p>{{some_text| replace('l','L')}}</p>
-    <p>{{some_text| reverse_string}}</p>
+    <p>{{some_text| reverse_string}}</p> <!-- calling the reverse_string(custom filter) in template_filters -->
     <p>{{some_text| repeat(3)}}</p>
     <p>{{some_text| alternate_case}}</p>
     

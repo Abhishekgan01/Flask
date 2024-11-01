@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %}  <!-- extending base.html -->
     <title>{% block title %}
             Index Page
            {% endblock %}
@@ -13,7 +13,9 @@
     {% for value in mylist %}
         <p>{{ value }}</p> <!-- printing each value -->
     {% endfor %}
-    
+
+    <a href = "{{ url_for('others') }}">Other</a> <!-- displaying link that is linked to other.html and calling the others sunction in template_filters.py -->
+
     {%endblock%}
 
 </body>
