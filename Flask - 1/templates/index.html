@@ -11,7 +11,11 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <p>This will always be all page</p>
+    <p>{{ mylist }}</p> <!-- printing all value at once -->
+    {% for value in mylist %}
+        <p>{{ value }}</p> <!-- printing each value -->
+    {% endfor %}
+        <p>This will always be all page</p>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
