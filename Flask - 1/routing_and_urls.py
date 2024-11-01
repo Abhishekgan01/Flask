@@ -7,7 +7,6 @@ app=Flask(__name__)
 def index():
     return "Hello, World!"
 
-"""
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
     if request.method == 'GET':
@@ -17,7 +16,6 @@ def hello():
     else:
         return "You will never see this message"
     return "Hello!"
-"""
 
 @app.route('/hello')
 def hello():
@@ -26,7 +24,7 @@ def hello():
     response.headers['content-type'] = 'text/file'
     return response
 
-@app.route('/greet/<name>')
+@app.route('/greet/<name>') #dynamic variable
 def greet(name):
     return f"Hello {name}"
 
@@ -34,8 +32,9 @@ def greet(name):
 def add(number1, number2):
     return f"{number1} + {number2} = {number1 + number2 }"
 
-@app.route('/handle_url_params')
+@app.route('/handle_url_params') #Request Instances
 def handle_params():
+    #return str(request.args) - ImmutableMultiDict([])
     if 'greeting' in request.args.keys() and 'name' in request.args.keys():
         greeting = request.args['greeting']
         name = request.args.get('name')
