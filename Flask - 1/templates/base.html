@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block title%}
-            Default Value
-           {%endblock%}
+    <title>{% block title %}
+            Default Value 
+           {% endblock %}
     </title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <p>This will always be all page</p>
+    <p>This will always present in all the pages</p>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
@@ -21,6 +20,8 @@
             </ul>
         {% endif %}
     {% endwith %}
-    {%block content%} {%endblock%}
+    {%block content%} 
+    <!--      Contents should be given in this section           -->
+    {%endblock%}
 </body>
 </html>
